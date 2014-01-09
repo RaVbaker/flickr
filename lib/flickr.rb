@@ -219,11 +219,11 @@ class Flickr
     
     # builds a PhotoCollection from given params, such as those returned from 
     # photos.search API call. Note all the info is contained in the value of 
-    # the first (and only) key-value pair of the response. The key will vary 
-    # depending on the original object the photos are related to (e.g 'photos',
-    # 'photoset', etc)
+    # the second key-value pair of the response. The first key-value pair
+    # simply contains 200 - OK. The key will vary depending on the original 
+    # object the photos are related to (e.g 'photos', 'photoset', etc)
     def initialize(photos_api_response={}, api_key={})
-      photos = photos_api_response.values.first 
+      photos = photos_api_response.values.at(1) 
       [ "page", "pages", "perpage", "total" ].each { |i| instance_variable_set("@#{i}", photos[i])} 
       collection = photos['photo'] || []
       collection = [collection] if collection.is_a? Hash
