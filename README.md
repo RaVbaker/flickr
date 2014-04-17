@@ -8,6 +8,8 @@ http://github.com/RaVbaker/flickr
 
 An insanely easy interface to the Flickr photo-sharing service. By Scott Raymond. (& updated May 2008 by Chris Taggart, http://pushrod.wordpress.com & maintained since May 2010 by me - Rafal Piekarski)
 
+It's a simple interface for using Flickr API - [https://www.flickr.com/services/api/](https://www.flickr.com/services/api/)
+
 ## FEATURES/PROBLEMS:
 
 The flickr gem (famously featured in a RubyonRails screencast) had broken with Flickr's new authentication scheme and updated API.
