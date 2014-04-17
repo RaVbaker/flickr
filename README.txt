@@ -4,7 +4,7 @@ http://github.com/RaVbaker/flickr
 
 == DESCRIPTION:
 
-An insanely easy interface to the Flickr photo-sharing service. By Scott Raymond. (& updated May 2008 by Chris Taggart, http://pushrod.wordpress.com & updated May 2010 by Rafal Piekarski)
+An insanely easy interface to the Flickr photo-sharing service. By Scott Raymond. (& updated May 2008 by Chris Taggart, http://pushrod.wordpress.com & updated from May 2010 by Rafal Piekarski)
 
 == FEATURES/PROBLEMS:
 
@@ -38,7 +38,7 @@ This has now been largely corrected, though not all current API calls are suppor
     File.open(p.filename, 'w') do |f|
       f.puts p.file('Square')                   # ...and save a local copy of their square thumbnail
     end
-  end                              
+  end
 
 == REQUIREMENTS:
 
@@ -47,46 +47,25 @@ This has now been largely corrected, though not all current API calls are suppor
 == INSTALL:
 
   sudo gem install flickr.rb
-  
+
 * Gem homepage: http://rubygems.org/gems/flickr.rb
 
 == CONFIGURING:
 
-If you want to use this gem/plugin with Rails you can create configuration file in /config directory with specified api connection settings. For example:
+If you want to use this gem/plugin with Rails (for version 3) you can create configuration file in /config directory with specified api connection settings. For example:
 
   development:
     api_key: SomeLongApiKey
     shared_secret: secret!
     auth_token: authSecretToken
-  
+
   beta:
     api_key: SomeLongApiKeyBeta
     shared_secret: secretBeta!
     auth_token: authSecretTokenBeta
-    
-  
+
+
 
 == LICENSE:
 
-(The MIT License)
-
-Copyright (c) 2005-2010 Scott Raymond, Patrick Plattes, Chris Taggart, Rafal Piekarski
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+See in `LICENSE` file
