@@ -178,7 +178,7 @@ href="../Flickr.html">Flickr</a> and make it accessible in a friendly way</p>
         
         <div class="method-heading">
           <span class="method-name">new</span><span
-            class="method-args">(photos_api_response={}, api_key={})</span>
+            class="method-args">(photos_api_response={}, api_key={}, list_node="photos")</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -198,8 +198,8 @@ are related to (e.g &#39;photos&#39;, &#39;photoset&#39;, etc)</p>
           
           <div class="method-source-code" id="new-source">
             <pre><span class="ruby-comment"># File lib/flickr.rb, line 225</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">photos_api_response</span>={}, <span class="ruby-identifier">api_key</span>={})
-  <span class="ruby-identifier">photos</span> = <span class="ruby-identifier">photos_api_response</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">photos_api_response</span>={}, <span class="ruby-identifier">api_key</span>={}, <span class="ruby-identifier">list_node</span>=<span class="ruby-string">&quot;photos&quot;</span>)
+  <span class="ruby-identifier">photos</span> = <span class="ruby-identifier">photos_api_response</span>[<span class="ruby-identifier">list_node</span>]
   [ <span class="ruby-string">&quot;page&quot;</span>, <span class="ruby-string">&quot;pages&quot;</span>, <span class="ruby-string">&quot;perpage&quot;</span>, <span class="ruby-string">&quot;total&quot;</span> ].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{i}&quot;</span>, <span class="ruby-identifier">photos</span>[<span class="ruby-identifier">i</span>])}
   <span class="ruby-identifier">collection</span> = <span class="ruby-identifier">photos</span>[<span class="ruby-string">&#39;photo&#39;</span>] <span class="ruby-operator">||</span> []
   <span class="ruby-identifier">collection</span> = [<span class="ruby-identifier">collection</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Hash</span>

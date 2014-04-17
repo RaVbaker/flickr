@@ -578,7 +578,7 @@ will pass the call to the flickr.test.echo method.</p>
         
         <div class="method-heading">
           <span class="method-name">photos_request</span><span
-            class="method-args">(method, params={})</span>
+            class="method-args">(method, params={}, list_node="photos")</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -596,9 +596,9 @@ href="Flickr/Photo.html">Photo</a> objects)</p>
           
           <div class="method-source-code" id="photos_request-source">
             <pre><span class="ruby-comment"># File lib/flickr.rb, line 191</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">photos_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>={})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">photos_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">list_node</span>=<span class="ruby-string">&quot;photos&quot;</span>)
   <span class="ruby-identifier">photos</span> = <span class="ruby-identifier">request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>)
-  <span class="ruby-constant">PhotoCollection</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">photos</span>, <span class="ruby-ivar">@api_key</span>)
+  <span class="ruby-constant">PhotoCollection</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">photos</span>, <span class="ruby-ivar">@api_key</span>, <span class="ruby-identifier">list_node</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           

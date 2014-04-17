@@ -333,7 +333,7 @@ flickr.photosets.getInfo flickr.photosets.getPhotos</p>
           <div class="method-source-code" id="getPhotos-source">
             <pre><span class="ruby-comment"># File lib/flickr.rb, line 728</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">getPhotos</span>
-  <span class="ruby-identifier">photosetPhotos</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">photos_request</span>(<span class="ruby-string">&#39;photosets.getPhotos&#39;</span>, {<span class="ruby-string">&#39;photoset_id&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@id</span>})
+  <span class="ruby-identifier">photosetPhotos</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">photos_request</span>(<span class="ruby-string">&#39;photosets.getPhotos&#39;</span>, {<span class="ruby-string">&#39;photoset_id&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@id</span>}, <span class="ruby-string">&quot;photoset&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
