@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version         = '1.1.1'
   s.authors         = ['Scott Raymond, Patrick Plattes, Rafal Piekarski']
   s.autorequire     = 'flickr.rb'
-  s.date            = '2010-05-15'
+  s.date            = '2014-04-17'
   s.email           = 'ravbaker@gmail.com'
   s.files           = Dir.glob("**/*").delete_if { |item| item.include?(".git") || item[/^pkg/] }
   s.homepage        = 'http://github.com/RaVbaker/flickr/'
