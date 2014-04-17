@@ -1,3 +1,8 @@
+1.1.1 2014-04-17
+* Migrated to usage of Bundler for dependency tracking
+* Fixes retrieving list of photos no matter which sibling they are in XML structure
+* Made tests compatible with latest version of mocha
+
 1.1.0 2010-05-16
 * Major improvement - now gem is very easy to use as a rails plugin with external configuration for api connection. - /config/flickr.api.yml
 
@@ -18,7 +23,7 @@
 * 1 major enhancement
  * When a collection of photos is fetched (e.g. by Flickr#search), a PhotoCollection object is now returned, a type of array, which allows easy access to the pagination information returned by Flickr (e.g. total items, pages, etc). Previously this info was lost
 * Minor enhancements:
- * Refactored parsing of response when getting info about photo (public API is not changed). 
+ * Refactored parsing of response when getting info about photo (public API is not changed).
  * All returned info is now parsed and stored (previously only some attributes were)
  * A record is kept of whether info has been previously fetched from Flickr (avoids unnecessary extra calls)
  * Improved User#getInfo. No longer makes API call for pretty_url (which was in addition to main getInfo call) or photos_url
@@ -49,7 +54,7 @@
 * Minor enhancements:
   * Tweaked internals so new client instance isn't created each time new object (e.g. photo, user) is created
   * Improved test coverage
-  
+
 == 1.0.4 2008-05-11
 
 * 1 major enhancement:
