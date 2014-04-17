@@ -1,3 +1,6 @@
+1.1.2 2014-04-17
+* No changes at all. I failed to set a gem update date for 1.1.1
+
 1.1.1 2014-04-17
 * Migrated to usage of Bundler for dependency tracking
 * Fixes retrieving list of photos no matter which sibling they are in XML structure
