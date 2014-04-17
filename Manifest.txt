@@ -1,10 +1,10 @@
-History.txt
+Changelog.txt
 index.html
 init.rb
 lib/flickr.rb
 LICENSE
 Manifest.txt
 Rakefile
-README.txt          
+README.txt
 test/flickr_test.rb
 TODO

@@ -1,8 +1,7 @@
 require 'rake'
 require 'rake/testtask'
 require 'rdoc/task'
-require 'rubygems'
-require 'rubygems/package_task'
+require "bundler/gem_tasks"
 
 task :default => :test
 
@@ -21,26 +20,6 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README.txt')
   rdoc.rdoc_files.include('lib/**/*.rb')
-end
-
-spec = Gem::Specification.new do |s|
-  s.add_dependency('xml-simple', '>= 1.0.7')
-  s.name = 'flickr.rb'
-  s.version = "1.1.0"
-  s.platform = Gem::Platform::RUBY
-  s.summary = "An insanely easy interface to the Flickr photo-sharing service. Also available as a Rails plugin! By Scott Raymond. Maintainer: Patrick Plattes, Rafal Piekarski"
-  s.requirements << 'Flickr developers API key'
-  s.files = Dir.glob("**/*").delete_if { |item| item.include?(".git") || item[/^pkg/] }
-  s.require_path = 'lib'
-  s.author = "Scott Raymond, Patrick Plattes, Rafal Piekarski"
-  s.email = "ravbaker@gmail.com"
-  s.rubyforge_project = "flickr"
-  s.homepage = "http://github.com/RaVbaker/flickr/"
-end
-
-Gem::PackageTask.new(spec) do |pkg|
-  pkg.need_zip = true
-  pkg.need_tar = true
 end
 
 task "Dump Gemspec file"
