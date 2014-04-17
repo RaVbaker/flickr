@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name            = 'flickr'
+  s.name            = 'flickr.rb'
   s.version         = '1.1.1'
   s.authors         = ['Scott Raymond, Patrick Plattes, Rafal Piekarski']
   s.autorequire     = 'flickr.rb'
