@@ -188,9 +188,9 @@ class Flickr
   end
 
   # acts like request but returns a PhotoCollection (a list of Photo objects)
-  def photos_request(method, params={})
+  def photos_request(method, params={}, list_node="photos")
     photos = request(method, params)
-    PhotoCollection.new(photos, @api_key)
+    PhotoCollection.new(photos, @api_key, list_node)
   end
 
   # Builds url for Flickr API REST request from given the flickr method name
@@ -222,8 +222,8 @@ class Flickr
     # the first (and only) key-value pair of the response. The key will vary
     # depending on the original object the photos are related to (e.g 'photos',
     # 'photoset', etc)
-    def initialize(photos_api_response={}, api_key={})
-      photos = photos_api_response.values.first
+    def initialize(photos_api_response={}, api_key={}, list_node="photos")
+      photos = photos_api_response[list_node]
       [ "page", "pages", "perpage", "total" ].each { |i| instance_variable_set("@#{i}", photos[i])}
       collection = photos['photo'] || []
       collection = [collection] if collection.is_a? Hash
@@ -726,7 +726,7 @@ class Flickr
     end
 
     def getPhotos
-      photosetPhotos = @client.photos_request('photosets.getPhotos', {'photoset_id' => @id})
+      photosetPhotos = @client.photos_request('photosets.getPhotos', {'photoset_id' => @id}, "photoset")
     end
 
   end
