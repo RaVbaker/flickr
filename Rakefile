@@ -1,11 +1,11 @@
 require 'rake'
 require 'rake/testtask'
-require 'rake/rdoctask'
-require 'rake/gempackagetask'
+require 'rdoc/task'
 require 'rubygems'
+require 'rubygems/package_task'
 
 task :default => :test
-         
+
 desc 'Test the flickr plugin.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
@@ -38,7 +38,7 @@ spec = Gem::Specification.new do |s|
   s.homepage = "http://github.com/RaVbaker/flickr/"
 end
 
-Rake::GemPackageTask.new(spec) do |pkg|
+Gem::PackageTask.new(spec) do |pkg|
   pkg.need_zip = true
   pkg.need_tar = true
 end
