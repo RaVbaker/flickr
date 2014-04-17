@@ -968,7 +968,8 @@ class TestFlickr < Test::Unit::TestCase
   end
 
   def dummy_photos_response
-    { "photos" =>
+    { "stat"=>"ok",
+      "photos" =>
       { "photo" =>
         [{ "id" => "foo123",
            "key1" => "value1",
@@ -982,7 +983,8 @@ class TestFlickr < Test::Unit::TestCase
   end
 
   def dummy_single_photo_response
-    { "photos" =>
+    { "stat"=>"ok",
+      "photos" =>
       { "photo" =>
         { "id" => "foo123",
           "key1" => "value1",
@@ -990,7 +992,7 @@ class TestFlickr < Test::Unit::TestCase
   end
 
   def dummy_zero_photo_response
-    { "photos" => { "total" => 0 } }
+    { "stat"=>"ok", "photos" => { "total" => 0 } }
   end
 
   def dummy_user_response
@@ -1020,7 +1022,7 @@ class TestFlickr < Test::Unit::TestCase
   end
 
   def dummy_photoset_photos_response
-    { "photoset" =>
+    { "stat"=>"ok", "photoset" =>
       { "photo" =>
         [{ "id" => "foo123",
            "key1" => "value1",
