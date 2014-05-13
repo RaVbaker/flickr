@@ -10,7 +10,7 @@ An insanely easy interface to the Flickr photo-sharing service. By Scott Raymond
 
 It's a simple interface for using Flickr API - [https://www.flickr.com/services/api/](https://www.flickr.com/services/api/)
 
-## FEATURES/PROBLEMS:
+## FEATURES:
 
 The flickr gem (famously featured in a RubyonRails screencast) had broken with Flickr's new authentication scheme and updated API.
 This has now been largely corrected, though not all current API calls are supported yet. If you need something let me know in pull requests.
@@ -92,6 +92,10 @@ If you want to use this gem/plugin with Rails (for version 3) you can create con
       shared_secret: secretBeta!
       auth_token: authSecretTokenBeta
 
+
+## DOCUMENTATION
+
+Full documentation: [ravbaker.github.io/flickr](http://ravbaker.github.io/flickr).
 
 
 ## CONTRIBUTING
