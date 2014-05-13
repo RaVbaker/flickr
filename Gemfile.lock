@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    flickr (1.1.0)
+    flickr.rb (1.1.2)
       xml-simple (>= 1.0.7)
 
 GEM
@@ -18,7 +18,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  flickr!
+  flickr.rb!
   mocha
   rake
   rdoc

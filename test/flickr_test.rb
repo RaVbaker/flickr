@@ -16,6 +16,21 @@ class TestFlickr < Test::Unit::TestCase
     assert_equal 'some_shared_secret', flickr.instance_variable_get(:@shared_secret)
   end
 
+  def test_should_instantiate_new_flickr_with_ssl_verify_enabled_by_default
+    Flickr.any_instance.stubs(:login)
+    flickr = Flickr.new('some_api_key')
+    assert_equal true, flickr.instance_variable_get(:@verify_ssl)
+  end
+
+  def test_should_instantiate_new_flickr_with_ssl_options
+    Flickr.any_instance.stubs(:login)
+    flickr = Flickr.new(:api_key => 'some_api_key',  :verify_ssl => false, :ca_file => 'a/path/to/cert.pem')
+
+    assert_equal 'some_api_key', flickr.api_key
+    assert_equal false, flickr.instance_variable_get(:@verify_ssl)
+    assert_equal 'a/path/to/cert.pem', flickr.instance_variable_get(:@ca_file)
+  end
+
   def test_should_instantiate_new_flickr_client_on_new_api
     flickr = Flickr.new(:api_key => 'some_api_key', :shared_secret => 'some_shared_secret', 'foo' => 'bar')
 
@@ -181,7 +196,7 @@ class TestFlickr < Test::Unit::TestCase
   def test_should_generate_login_url
     f = flickr_client
     f.expects(:signature_from).with('api_key' => 'some_api_key', 'perms' => 'write').returns('validsignature')
-    assert_equal 'http://flickr.com/services/auth/?api_key=some_api_key&perms=write&api_sig=validsignature', f.login_url('write')
+    assert_equal 'https://flickr.com/services/auth/?api_key=some_api_key&perms=write&api_sig=validsignature', f.login_url('write')
   end
 
   def test_should_get_token_from_frob

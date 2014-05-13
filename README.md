@@ -13,7 +13,7 @@ It's a simple interface for using Flickr API - [https://www.flickr.com/services/
 ## FEATURES/PROBLEMS:
 
 The flickr gem (famously featured in a RubyonRails screencast) had broken with Flickr's new authentication scheme and updated API.
-This has now been largely corrected, though not all current API calls are supported yet.
+This has now been largely corrected, though not all current API calls are supported yet. If you need something let me know in pull requests.
 
 ## SYNOPSIS:
 
@@ -66,6 +66,19 @@ Or install it yourself as:
 * Gem homepage: [http://rubygems.org/gems/flickr.rb](http://rubygems.org/gems/flickr.rb)
 
 ## CONFIGURING:
+
+You can provide just a api_key `Flickr.new('api_key')` or full set of advanced configuration options:
+
+    flickr = Flickr.new(
+      api_key:       'your_api_key',
+      shared_secret: 'shared_secret_code',
+      auth_token:    'authSecretToken',
+      verify_ssl:    true,
+      ca_file:       '/path/to/cert.pem'
+    )
+
+As you see you can turn off ssl verification (`verify_ssl: false`) or provide your own CA file (`:ca_file` option) for SSL verification. By default gem uses the `OpenSSL::X509::DEFAULT_CERT_FILE` definitions.
+
 
 If you want to use this gem/plugin with Rails (for version 3) you can create configuration file in /config directory with specified api connection settings. For example:
 

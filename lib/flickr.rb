@@ -34,7 +34,7 @@
 
 
 require 'cgi'
-require 'net/http'
+require 'net/https'
 require 'xmlsimple'
 require 'digest/md5'
 
@@ -43,7 +43,7 @@ class Flickr
   attr_reader :api_key, :auth_token
   attr_accessor :user
 
-  HOST_URL = 'http://api.flickr.com'
+  HOST_URL = 'https://api.flickr.com'
   API_PATH = '/services/rest'
 
   # Flickr, annoyingly, uses a number of representations to specify the size
@@ -72,12 +72,13 @@ class Flickr
   # private photos)
   # There are two ways to initialize the Flickr client. The preferred way is with
   # a hash of params, e.g. 'api_key' => 'your_api_key', 'shared_secret' =>
-  # 'shared_secret_code'. Other way is to use in Rails an config file
-  # RAILS_ROOT/config/flickr.api.yml and there use params as key/values even
-  # specified for every environment.
+  # 'shared_secret_code', 'verify_ssl' => true, 'ca_file' => '/path/to/cert.pem'.
+  # Other way is to use in Rails an config file RAILS_ROOT/config/flickr.api.yml
+  # and there use params as key/values even specified for every environment.
   def initialize(api_key_or_params={})
     @host = HOST_URL
     @api = API_PATH
+    @verify_ssl = true
     api_key_or_params={} if api_key_or_params.nil? # fix for nil value as argument
     api_key_or_params = {:api_key => api_key_or_params} if api_key_or_params.is_a?(String)
     api_key_or_params = Config.get if Config.parsed? and api_key_or_params.empty?
@@ -88,6 +89,8 @@ class Flickr
     @api_key = api_key_or_params[:api_key]
     @shared_secret = api_key_or_params[:shared_secret]
     @auth_token = api_key_or_params[:auth_token]
+    @ca_file = api_key_or_params[:ca_file]
+    @verify_ssl = !(api_key_or_params[:verify_ssl].to_s === 'false')
   end
 
   # Gets authentication token given a Flickr frob, which is returned when user
@@ -163,7 +166,7 @@ class Flickr
 
   # Returns url for user to login in to Flickr to authenticate app for a user
   def login_url(perms)
-    "http://flickr.com/services/auth/?api_key=#{@api_key}&perms=#{perms}&api_sig=#{signature_from('api_key'=>@api_key, 'perms' => perms)}"
+    "https://flickr.com/services/auth/?api_key=#{@api_key}&perms=#{perms}&api_sig=#{signature_from('api_key'=>@api_key, 'perms' => perms)}"
   end
 
   # Implements everything else.
@@ -176,7 +179,14 @@ class Flickr
 
   # Does an HTTP GET on a given URL and returns the response body
   def http_get(url)
-    Net::HTTP.get_response(URI.parse(url)).body.to_s
+    url = URI.parse(url)
+    http = Net::HTTP.new url.host, url.port
+    http.use_ssl = true
+    http.verify_mode = (@verify_ssl ? OpenSSL::SSL::VERIFY_PEER : OpenSSL::SSL::VERIFY_NONE)
+    http.ca_file = @ca_file if @ca_file
+    http.start do |res|
+      res.request_get(url).body.to_s
+    end
   end
 
   # Takes a Flickr API method name and set of parameters; returns an XmlSimple object with the response
