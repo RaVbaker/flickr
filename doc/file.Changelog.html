@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: Changelog
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.Changelog.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: Changelog</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'>== 1.2.0 2014-05-13<br/>* New image sizes support: Large square, Small 320, Medium 640 - #5 - https://github.com/RaVbaker/flickr/issues/5<br/>* SSL support for requests to Flickr API - #4 - https://github.com/RaVbaker/flickr/issues/4<br/>  This change might not be backward compatible so I changed gem version to 1.2. See README.md for more info about SSL<br/><br/>== 1.1.2 2014-04-17<br/>* No changes at all. I failed to set a gem update date for 1.1.1<br/><br/>== 1.1.1 2014-04-17<br/>* Migrated to usage of Bundler for dependency tracking<br/>* Fixes retrieving list of photos no matter which sibling they are in XML structure<br/>* Made tests compatible with latest version of mocha<br/><br/>== 1.1.0 2010-05-16<br/>* Major improvement - now gem is very easy to use as a rails plugin with external configuration for api connection. - /config/flickr.api.yml<br/><br/>== 1.0.9 2010-05-16<br/>* Few enhancements:<br/>  * New flickr api domain support: http://api.flickr.com<br/>  * depricated email/password params removed form Flickr#initialize and only hash method supported<br/>  * New rdoc documentation.<br/>  * tests fixed<br/>  * init.rb - file ready for using library as a rails 3.x plugin.<br/><br/>== 1.0.8 2009-01-25<br/>* 2 minor enhancements<br/> * Refactored initialization of PhotoCollection so can be instantiated from response returned by photosets.getPhotos<br/> * Added photosets.getPhotos. Returns PhotoCollection<br/><br/>== 1.0.7 2008-11-26<br/>* 1 major enhancement<br/> * When a collection of photos is fetched (e.g. by Flickr#search), a PhotoCollection object is now returned, a type of array, which allows easy access to the pagination information returned by Flickr (e.g. total items, pages, etc). Previously this info was lost<br/>* Minor enhancements:<br/> * Refactored parsing of response when getting info about photo (public API is not changed).<br/> * All returned info is now parsed and stored (previously only some attributes were)<br/> * A record is kept of whether info has been previously fetched from Flickr (avoids unnecessary extra calls)<br/> * Improved User#getInfo. No longer makes API call for pretty_url (which was in addition to main getInfo call) or photos_url<br/>* Bugfixes<br/> * Fixed Photo#source not to make unnecessary API call<br/> * Fixed User#url not to make unnecessary API call<br/><br/>== 1.0.6 2008-07-30<br/>* Bugfixes:<br/>  * fixed Flickr#photos when used for searching<br/>  * fixed Flickr::Photo#url to not use usernames (if the user changes their username, the url will wrong)<br/>  * fixed Flickr#related_tags<br/>  * Flickr::Photo#to_s was making unnecessary API calls<br/>  * fixed &#39;test&#39; Rake task<br/>  * fixed &#39;gem&#39; Rake task<br/>* Minor enhancements:<br/>  * added Flickr#search as an alias for Flickr#photos in its search mode<br/>  * added Flickr#recent as an alias for Flickr#photos for recent photos<br/>  * added Flickr::Photo#pretty_url for the URL that includes a username if present<br/>  * added Flickr::Photo#size_url which is like url except &#39;Medium&#39; works the same as other sizes<br/>  * allow lowercase (&#39;medium&#39;) and symbol (:medium) forms for sizes<br/>  * internal code cleanup<br/><br/>== 1.0.5 2008-05-12<br/><br/>* 1 major change:<br/>  * Updated and refactored Flickr::Group class and Flickr#groups method to work with current Flickr API. Flickr#groups now searches for given group, rather than groups.getActiveList (which no longer exists as Flickr API call)<br/>* Minor enhancements:<br/>  * Tweaked internals so new client instance isn&#39;t created each time new object (e.g. photo, user) is created<br/>  * Improved test coverage<br/><br/>== 1.0.4 2008-05-11<br/><br/>* 1 major enhancement:<br/>  * Added authentication facility as per current Flickr API<br/>* 3 minor enhancements:<br/>  * Improved test suite<br/>  * Improved API for creating Flickr objects (old one still works)<br/>  * Protected methods that are only used internally (e.g. request, request_url)<br/><br/>== 1.0.3 2008-04-18<br/><br/>* Various bugfixes:<br/>  * User instantiation was broken (wrong number of params passed)<br/>  * Instantiating photos failed in several places if single photo returned<br/>  * Photosets#getInfo would always fail as the parameter name should be photoset_id, not photosets_id<br/>  * Removed call to flickr.people.getOnlineList in Flickr#users as that call is no longer in the Flickr API<br/>* Performance improvements:<br/>  * Url and image source uri now generated without a call to the Flickr API, as per the Flickr API docs</div></div>
+
+    <div id="footer">
+  Generated on Tue May 13 13:49:25 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

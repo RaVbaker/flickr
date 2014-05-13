@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.README.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'>
+<h1 id="label-flickr.rb">flickr.rb</h1>
+
+<p><a href="http://github.com/RaVbaker/flickr">github.com/RaVbaker/flickr</a></p>
+
+<p><a href="https://badge.fury.io/rb/flickr.rb.svg">{Gem Version</a>]</p>
+
+<h2 id="label-DESCRIPTION%3A">DESCRIPTION:</h2>
+
+<p>An insanely easy interface to the Flickr photo-sharing service. By Scott
+Raymond. (&amp; updated May 2008 by Chris Taggart, <a
+href="http://pushrod.wordpress.com">pushrod.wordpress.com</a> &amp;
+maintained since May 2010 by me - Rafal Piekarski)</p>
+
+<p>It&#39;s a simple interface for using Flickr API - <a
+href="https://www.flickr.com/services/api/">www.flickr.com/services/api/</a></p>
+
+<h2 id="label-FEATURES%3A">FEATURES:</h2>
+
+<p>The flickr gem (famously featured in a RubyonRails screencast) had broken
+with Flickr&#39;s new authentication scheme and updated API.
+This has now
+been largely corrected, though not all current API calls are supported yet.
+If you need something let me know in pull requests.</p>
+
+<h2 id="label-SYNOPSIS%3A">SYNOPSIS:</h2>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;flickr&#39;</span>
+<span class="ruby-identifier">flickr</span> = <span class="ruby-constant">Flickr</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;some_flickr_api_key&#39;</span>)    <span class="ruby-comment"># create a flickr client (get an API key from http://api.flickr.com/services/api/)</span>
+<span class="ruby-identifier">user</span> = <span class="ruby-identifier">flickr</span>.<span class="ruby-identifier">users</span>(<span class="ruby-string">&#39;sco@scottraymond.net&#39;</span>)   <span class="ruby-comment"># lookup a user</span>
+<span class="ruby-identifier">user</span>.<span class="ruby-identifier">name</span>                                     <span class="ruby-comment"># get the user&#39;s name</span>
+<span class="ruby-identifier">user</span>.<span class="ruby-identifier">location</span>                                 <span class="ruby-comment"># and location</span>
+<span class="ruby-identifier">user</span>.<span class="ruby-identifier">photos</span>                                   <span class="ruby-comment"># grab their collection of Photo objects...</span>
+<span class="ruby-identifier">user</span>.<span class="ruby-identifier">groups</span>                                   <span class="ruby-comment"># ...the groups they&#39;re in...</span>
+<span class="ruby-identifier">user</span>.<span class="ruby-identifier">contacts</span>                                 <span class="ruby-comment"># ...their contacts...</span>
+<span class="ruby-identifier">user</span>.<span class="ruby-identifier">favorites</span>                                <span class="ruby-comment"># ...favorite photos...</span>
+<span class="ruby-identifier">user</span>.<span class="ruby-identifier">photosets</span>                                <span class="ruby-comment"># ...their photo sets...</span>
+<span class="ruby-identifier">user</span>.<span class="ruby-identifier">tags</span>                                     <span class="ruby-comment"># ...their tags...</span>
+<span class="ruby-identifier">user</span>.<span class="ruby-identifier">popular_tags</span>                                                                                                               <span class="ruby-comment"># ...and their popular tags</span>
+<span class="ruby-identifier">recentphotos</span> = <span class="ruby-identifier">flickr</span>.<span class="ruby-identifier">photos</span>                  <span class="ruby-comment"># get the 100 most recent public photos</span>
+<span class="ruby-identifier">photo</span> = <span class="ruby-identifier">recentphotos</span>.<span class="ruby-identifier">first</span>                    <span class="ruby-comment"># or very most recent one</span>
+<span class="ruby-identifier">photo</span>.<span class="ruby-identifier">url</span>                                     <span class="ruby-comment"># see its URL,</span>
+<span class="ruby-identifier">photo</span>.<span class="ruby-identifier">title</span>                                   <span class="ruby-comment"># title,</span>
+<span class="ruby-identifier">photo</span>.<span class="ruby-identifier">description</span>                             <span class="ruby-comment"># and description,</span>
+<span class="ruby-identifier">photo</span>.<span class="ruby-identifier">owner</span>                                   <span class="ruby-comment"># and its owner.</span>
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">photo</span>.<span class="ruby-identifier">filename</span>, <span class="ruby-string">&#39;w&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">file</span>                            <span class="ruby-comment"># save the photo to a local file</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">flickr</span>.<span class="ruby-identifier">photos</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>                     <span class="ruby-comment"># get the last 100 public photos...</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">filename</span>, <span class="ruby-string">&#39;w&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">file</span>(<span class="ruby-string">&#39;Square&#39;</span>)                   <span class="ruby-comment"># ...and save a local copy of their square thumbnail</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<h2 id="label-REQUIREMENTS%3A">REQUIREMENTS:</h2>
+<ul><li>
+<p>Xmlsimple gem</p>
+</li></ul>
+
+<h2 id="label-INSTALLATION%3A">INSTALLATION:</h2>
+
+<p>Add this line to your application&#39;s Gemfile:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>flickr.rb</span><span class='tstring_end'>&#39;</span></span></code></pre>
+
+<p>And then execute:</p>
+
+<pre class="code ruby"><code class="ruby">$ bundle</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre class="code ruby"><code class="ruby">$ gem install flickr.rb</code></pre>
+<ul><li>
+<p>Gem homepage: <a
+href="http://rubygems.org/gems/flickr.rb">rubygems.org/gems/flickr.rb</a></p>
+</li></ul>
+
+<h2 id="label-CONFIGURING%3A">CONFIGURING:</h2>
+
+<p>You can provide just a api_key <code>Flickr.new(&#39;api_key&#39;)</code>
+or full set of advanced configuration options:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_flickr'>flickr</span> <span class='op'>=</span> <span class='const'>Flickr</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+  <span class='label'>api_key:</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>your_api_key</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>shared_secret:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shared_secret_code</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>auth_token:</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>authSecretToken</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>verify_ssl:</span>    <span class='kw'>true</span><span class='comma'>,</span>
+  <span class='label'>ca_file:</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/path/to/cert.pem</span><span class='tstring_end'>&#39;</span></span>
+<span class='rparen'>)</span></code></pre>
+
+<p>As you see you can turn off ssl verification (<code>verify_ssl:
+false</code>) or provide your own CA file (<code>:ca_file</code> option)
+for SSL verification. By default gem uses the
+<code>OpenSSL::X509::DEFAULT_CERT_FILE</code> definitions.</p>
+
+<p>If you want to use this gem/plugin with Rails (for version 3) you can
+create configuration file in /config directory with specified api
+connection settings. For example:</p>
+
+<pre class="code ruby"><code class="ruby">development:
+  api_key: SomeLongApiKey
+  shared_secret: secret!
+  auth_token: authSecretToken
+
+beta:
+  api_key: SomeLongApiKeyBeta
+  shared_secret: secretBeta!
+  auth_token: authSecretTokenBeta</code></pre>
+
+<h2 id="label-DOCUMENTATION">DOCUMENTATION</h2>
+
+<p>Full documentation: <a
+href="http://ravbaker.github.io/flickr">ravbaker.github.io/flickr</a>.</p>
+
+<h2 id="label-CONTRIBUTING">CONTRIBUTING</h2>
+<ol><li>
+<p>Fork it</p>
+</li><li>
+<p>Create your feature branch (<code>git checkout -b my-new-feature</code>)</p>
+</li><li>
+<p>Commit your changes (<code>git commit -am &#39;Add some
+feature&#39;</code>)</p>
+</li><li>
+<p>Push to the branch (<code>git push origin my-new-feature</code>)</p>
+</li><li>
+<p>Create new Pull Request</p>
+</li></ol>
+
+<h2 id="label-THANKS">THANKS</h2>
+<ul><li>
+<p>Scott Raymond</p>
+</li><li>
+<p>Patrick Plattes</p>
+</li><li>
+<p>Chris Taggart</p>
+</li></ul>
+
+<h2 id="label-LICENSE">LICENSE</h2>
+
+<p>MIT License , see <code>LICENSE</code> for more details.</p>
+
+<p>© 2010 - 2014 Rafal “RaVbaker” Piekarski</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Tue May 13 13:49:25 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

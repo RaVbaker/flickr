@@ -1,7 +1,7 @@
 require 'rake'
 require 'rake/testtask'
-require 'rdoc/task'
 require "bundler/gem_tasks"
+require 'yard'
 
 task :default => :test
 
@@ -14,14 +14,11 @@ Rake::TestTask.new(:test) do |t|
 end
 
 desc 'Generate documentation for the flickr plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'Flickr'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README.md')
-  rdoc.rdoc_files.include('LICENSE')
-  rdoc.rdoc_files.include('Changelog.txt')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+task :rdoc  => :yard
+
+YARD::Rake::YardocTask.new do |t|
+  # t.files   = ['lib/**/*.rb']   # optional
+  # t.options = ['- LICENSE Changelog.txt'] # optional
 end
 
 task "Dump Gemspec file"
