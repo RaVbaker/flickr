@@ -19,6 +19,8 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.title    = 'Flickr'
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README.md')
+  rdoc.rdoc_files.include('LICENSE')
+  rdoc.rdoc_files.include('Changelog.txt')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
