@@ -2,76 +2,76 @@
 
 <html>
 <head>
-<meta charset="UTF-8">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
 <title>class Flickr::Photo - Flickr</title>
 
-<link href="../fonts.css" rel="stylesheet">
-<link href="../rdoc.css" rel="stylesheet">
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../";
 </script>
 
-<script src="../js/jquery.js"></script>
-<script src="../js/navigation.js"></script>
-<script src="../js/search_index.js"></script>
-<script src="../js/search.js"></script>
-<script src="../js/searcher.js"></script>
-<script src="../js/darkfish.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
 
 
-<body id="top" role="document" class="class">
-<nav role="navigation">
-  <div id="project-navigation">
-    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
-  <h2>
-    <a href="../index.html" rel="home">Home</a>
-  </h2>
-
-  <div id="table-of-contents-navigation">
-    <a href="../table_of_contents.html#pages">Pages</a>
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
     <a href="../table_of_contents.html#classes">Classes</a>
     <a href="../table_of_contents.html#methods">Methods</a>
-  </div>
-</div>
+  </h3>
+</nav>
 
-    <div id="search-section" role="search" class="project-section initially-hidden">
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
   <form action="#" method="get" accept-charset="utf-8">
-    <div id="search-field-wrapper">
-      <input id="search-field" role="combobox" aria-label="Search"
-             aria-autocomplete="list" aria-controls="search-results"
-             type="text" name="search" placeholder="Search" spellcheck="false"
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
              title="Type to search, Up and Down to navigate, Enter to load">
-    </div>
-
-    <ul id="search-results" aria-label="Search Results"
-        aria-busy="false" aria-expanded="false"
-        aria-atomic="false" class="initially-hidden"></ul>
+    </h3>
   </form>
-</div>
 
-  </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
 
   
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/flickr.rb
+  </ul>
+</nav>
+
+    
+  </div>
 
   <div id="class-metadata">
     
-    <div id="parent-class-section" class="nav-section">
-  <h3>Parent</h3>
-
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
   
   <p class="link">Object
   
-</div>
+</nav>
 
     
     
     <!-- Method Quickref -->
-<div id="method-list-section" class="nav-section">
-  <h3>Methods</h3>
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
 
-  <ul class="link-list" role="directory">
+  <ul class="link-list">
     
     <li ><a href="#method-c-new">::new</a>
     
@@ -142,19 +142,52 @@
     <li ><a href="#method-i-url">#url</a>
     
   </ul>
-</div>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Flickr.html">Flickr</a>
+  
+    <li><a href="../Flickr/Config.html">Flickr::Config</a>
+  
+    <li><a href="../Flickr/Group.html">Flickr::Group</a>
+  
+    <li><a href="../Flickr/Photo.html">Flickr::Photo</a>
+  
+    <li><a href="../Flickr/PhotoCollection.html">Flickr::PhotoCollection</a>
+  
+    <li><a href="../Flickr/Photoset.html">Flickr::Photoset</a>
+  
+    <li><a href="../Flickr/User.html">Flickr::User</a>
+  
+  </ul>
+</nav>
 
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-Flickr::Photo">
-  <h1 id="class-Flickr::Photo" class="class">
-    class Flickr::Photo
-  </h1>
+<div id="documentation">
+  <h1 class="class">class Flickr::Photo</h1>
 
-  <section class="description">
+  <div id="description" class="description">
     
-  </section>
+  </div><!-- description -->
 
   
   
@@ -167,10 +200,9 @@
     
 
     
-    <section class="attribute-method-details" class="method-section">
-      <header>
-        <h3>Attributes</h3>
-      </header>
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
 
       
       <div id="attribute-i-client" class="method-detail">
@@ -212,14 +244,13 @@
         </div>
       </div>
       
-    </section>
+    </section><!-- attribute-method-details -->
     
 
+    <!-- Methods -->
     
-     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
-       <header>
-         <h3>Public Class Methods</h3>
-       </header>
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
 
     
       <div id="method-c-new" class="method-detail ">
@@ -241,29 +272,27 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 423</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 436</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">api_key</span>={}, <span class="ruby-identifier">extra_params</span>={})
   <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
   <span class="ruby-ivar">@api_key</span> = <span class="ruby-identifier">api_key</span>
   <span class="ruby-identifier">extra_params</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{k}&quot;</span>, <span class="ruby-identifier">v</span>) } <span class="ruby-comment"># convert extra_params into instance variables</span>
   <span class="ruby-ivar">@client</span> = <span class="ruby-constant">Flickr</span>.<span class="ruby-identifier">new</span> <span class="ruby-ivar">@api_key</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- new-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- new-method -->
 
     
-    </section>
+    </section><!-- public-class-method-details -->
   
-     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
-       <header>
-         <h3>Public Instance Methods</h3>
-       </header>
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
 
     
       <div id="method-i-5B-5D" class="method-detail ">
@@ -280,27 +309,28 @@
         <div class="method-description">
           
           <p>Allows access to all photos instance variables through hash like interface,
-e.g. <a href=""datetaken"">photo</a> returns @datetaken instance variable.
-Useful for accessing any weird and wonderful parameter that may have been
-returned by <a href="../Flickr.html">Flickr</a> when finding the photo,
-e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
+e.g. <a href="http://"datetaken"">photo</a> returns @datetaken instance
+variable. Useful for accessing any weird and wonderful parameter that may
+have been returned by <a href="../Flickr.html">Flickr</a> when finding the
+photo, e.g. those returned by the extras argument in
+flickr.people.getPublicPhotos</p>
           
           
 
           
           <div class="method-source-code" id="5B-5D-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 436</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 449</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">param_name</span>)
   <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{param_name}&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- 5B-5D-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- 5B-5D-method -->
 
     
       <div id="method-i-add_note" class="method-detail ">
@@ -322,17 +352,17 @@ e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
 
           
           <div class="method-source-code" id="add_note-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 564</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 577</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_note</span>(<span class="ruby-identifier">note</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- add_note-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- add_note-method -->
 
     
       <div id="method-i-add_tag" class="method-detail ">
@@ -354,17 +384,17 @@ e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
 
           
           <div class="method-source-code" id="add_tag-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 586</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 599</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_tag</span>(<span class="ruby-identifier">tag</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- add_tag-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- add_tag-method -->
 
     
       <div id="method-i-context" class="method-detail ">
@@ -386,21 +416,21 @@ e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
 
           
           <div class="method-source-code" id="context-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 533</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 546</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">context</span>
   <span class="ruby-identifier">context</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">photos_getContext</span>(<span class="ruby-string">&#39;photo_id&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@id</span>)
   <span class="ruby-ivar">@previousPhoto</span> = <span class="ruby-constant">Photo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">context</span>[<span class="ruby-string">&#39;prevphoto&#39;</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;id&#39;</span>), <span class="ruby-ivar">@api_key</span>, <span class="ruby-identifier">context</span>[<span class="ruby-string">&#39;prevphoto&#39;</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">context</span>[<span class="ruby-string">&#39;prevphoto&#39;</span>][<span class="ruby-string">&#39;id&#39;</span>]<span class="ruby-operator">!=</span><span class="ruby-string">&#39;0&#39;</span>
   <span class="ruby-ivar">@nextPhoto</span> = <span class="ruby-constant">Photo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">context</span>[<span class="ruby-string">&#39;nextphoto&#39;</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;id&#39;</span>), <span class="ruby-ivar">@api_key</span>, <span class="ruby-identifier">context</span>[<span class="ruby-string">&#39;nextphoto&#39;</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">context</span>[<span class="ruby-string">&#39;nextphoto&#39;</span>][<span class="ruby-string">&#39;id&#39;</span>]<span class="ruby-operator">!=</span><span class="ruby-string">&#39;0&#39;</span>
   <span class="ruby-keyword">return</span> [<span class="ruby-ivar">@previousPhoto</span>, <span class="ruby-ivar">@nextPhoto</span>]
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- context-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- context-method -->
 
     
       <div id="method-i-dates-3D" class="method-detail ">
@@ -422,17 +452,17 @@ e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
 
           
           <div class="method-source-code" id="dates-3D-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 568</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 581</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">dates=</span>(<span class="ruby-identifier">dates</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- dates-3D-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- dates-3D-method -->
 
     
       <div id="method-i-deleteNote" class="method-detail ">
@@ -454,17 +484,17 @@ e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
 
           
           <div class="method-source-code" id="deleteNote-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 603</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 616</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">deleteNote</span>(<span class="ruby-identifier">note_id</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- deleteNote-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- deleteNote-method -->
 
     
       <div id="method-i-description" class="method-detail ">
@@ -486,18 +516,18 @@ e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
 
           
           <div class="method-source-code" id="description-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 475</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 488</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">description</span>
   <span class="ruby-ivar">@description</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">getInfo</span>(<span class="ruby-string">&quot;description&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- description-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- description-method -->
 
     
       <div id="method-i-description-3D" class="method-detail ">
@@ -519,17 +549,17 @@ e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
 
           
           <div class="method-source-code" id="description-3D-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 582</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 595</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">description=</span>(<span class="ruby-identifier">title</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- description-3D-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- description-3D-method -->
 
     
       <div id="method-i-editNote" class="method-detail ">
@@ -551,17 +581,17 @@ e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
 
           
           <div class="method-source-code" id="editNote-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 607</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 620</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">editNote</span>(<span class="ruby-identifier">note_id</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- editNote-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- editNote-method -->
 
     
       <div id="method-i-exif" class="method-detail ">
@@ -583,18 +613,18 @@ e.g. those returned by the extras argument in flickr.people.getPublicPhotos</p>
 
           
           <div class="method-source-code" id="exif-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 541</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 554</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">exif</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">photos_getExif</span>(<span class="ruby-string">&#39;photo_id&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@id</span>)[<span class="ruby-string">&#39;photo&#39;</span>]
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- exif-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- exif-method -->
 
     
       <div id="method-i-file" class="method-detail ">
@@ -617,18 +647,18 @@ File.open(photo.title, &#39;w&#39;) { |f| f.puts photo.file }</p>
 
           
           <div class="method-source-code" id="file-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 523</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 536</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">file</span>(<span class="ruby-identifier">size</span>=<span class="ruby-string">&#39;Medium&#39;</span>)
   <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>(<span class="ruby-identifier">size</span>))).<span class="ruby-identifier">body</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- file-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- file-method -->
 
     
       <div id="method-i-filename" class="method-detail ">
@@ -651,18 +681,18 @@ href="../Flickr.html">Flickr</a> NSID</p>
 
           
           <div class="method-source-code" id="filename-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 528</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 541</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">filename</span>
   <span class="ruby-node">&quot;#{@id}.jpg&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- filename-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- filename-method -->
 
     
       <div id="method-i-isfavorite" class="method-detail ">
@@ -684,18 +714,18 @@ href="../Flickr.html">Flickr</a> NSID</p>
 
           
           <div class="method-source-code" id="isfavorite-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 463</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 476</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">isfavorite</span>
   <span class="ruby-ivar">@isfavorite</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">getInfo</span>(<span class="ruby-string">&quot;isfavorite&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-ivar">@isfavorite</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- isfavorite-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- isfavorite-method -->
 
     
       <div id="method-i-license" class="method-detail ">
@@ -717,18 +747,18 @@ href="../Flickr.html">Flickr</a> NSID</p>
 
           
           <div class="method-source-code" id="license-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 467</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 480</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">license</span>
   <span class="ruby-ivar">@license</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">getInfo</span>(<span class="ruby-string">&quot;license&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-ivar">@license</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- license-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- license-method -->
 
     
       <div id="method-i-normalize_size" class="method-detail ">
@@ -750,18 +780,18 @@ href="../Flickr.html">Flickr</a> NSID</p>
 
           
           <div class="method-source-code" id="normalize_size-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 491</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 504</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">normalize_size</span>(<span class="ruby-identifier">size</span>)
   <span class="ruby-identifier">size</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">size</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">capitalize</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">size</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- normalize_size-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- normalize_size-method -->
 
     
       <div id="method-i-notes" class="method-detail ">
@@ -783,18 +813,18 @@ href="../Flickr.html">Flickr</a> NSID</p>
 
           
           <div class="method-source-code" id="notes-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 479</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 492</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">notes</span>
   <span class="ruby-ivar">@notes</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">getInfo</span>(<span class="ruby-string">&quot;notes&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-ivar">@notes</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- notes-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- notes-method -->
 
     
       <div id="method-i-owner" class="method-detail ">
@@ -819,7 +849,7 @@ we cache the result so we don&#39;t need to check again</p>
 
           
           <div class="method-source-code" id="owner-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 448</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 461</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">owner</span>
   <span class="ruby-keyword">case</span> <span class="ruby-ivar">@owner</span>
   <span class="ruby-keyword">when</span> <span class="ruby-constant">Flickr</span><span class="ruby-operator">::</span><span class="ruby-constant">User</span>
@@ -830,14 +860,14 @@ we cache the result so we don&#39;t need to check again</p>
     <span class="ruby-identifier">getInfo</span>(<span class="ruby-string">&quot;owner&quot;</span>)
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- owner-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- owner-method -->
 
     
       <div id="method-i-permissions" class="method-detail ">
@@ -859,18 +889,18 @@ we cache the result so we don&#39;t need to check again</p>
 
           
           <div class="method-source-code" id="permissions-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 546</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 559</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">permissions</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">photos_getPerms</span>(<span class="ruby-string">&#39;photo_id&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@id</span>)[<span class="ruby-string">&#39;perms&#39;</span>]
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- permissions-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- permissions-method -->
 
     
       <div id="method-i-perms-3D" class="method-detail ">
@@ -892,17 +922,17 @@ we cache the result so we don&#39;t need to check again</p>
 
           
           <div class="method-source-code" id="perms-3D-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 572</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 585</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">perms=</span>(<span class="ruby-identifier">perms</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- perms-3D-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- perms-3D-method -->
 
     
       <div id="method-i-postToBlog" class="method-detail ">
@@ -924,18 +954,18 @@ we cache the result so we don&#39;t need to check again</p>
 
           
           <div class="method-source-code" id="postToBlog-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 598</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 611</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">postToBlog</span>(<span class="ruby-identifier">blog_id</span>, <span class="ruby-identifier">title</span>=<span class="ruby-string">&#39;&#39;</span>, <span class="ruby-identifier">description</span>=<span class="ruby-string">&#39;&#39;</span>)
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">blogs_postPhoto</span>(<span class="ruby-string">&#39;photo_id&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@id</span>, <span class="ruby-string">&#39;title&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">title</span>, <span class="ruby-string">&#39;description&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">description</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- postToBlog-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- postToBlog-method -->
 
     
       <div id="method-i-pretty_url" class="method-detail ">
@@ -962,18 +992,18 @@ instead of</p>
 
           
           <div class="method-source-code" id="pretty_url-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 513</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 526</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">pretty_url</span>
   <span class="ruby-ivar">@url</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">getInfo</span>(<span class="ruby-string">&quot;pretty_url&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- pretty_url-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- pretty_url-method -->
 
     
       <div id="method-i-remove_tag" class="method-detail ">
@@ -995,17 +1025,17 @@ instead of</p>
 
           
           <div class="method-source-code" id="remove_tag-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 590</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 603</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_tag</span>(<span class="ruby-identifier">tag</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- remove_tag-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- remove_tag-method -->
 
     
       <div id="method-i-rotate" class="method-detail ">
@@ -1027,17 +1057,17 @@ instead of</p>
 
           
           <div class="method-source-code" id="rotate-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 594</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 607</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">rotate</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- rotate-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- rotate-method -->
 
     
       <div id="method-i-rotation" class="method-detail ">
@@ -1059,18 +1089,18 @@ instead of</p>
 
           
           <div class="method-source-code" id="rotation-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 471</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 484</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">rotation</span>
   <span class="ruby-ivar">@rotation</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">getInfo</span>(<span class="ruby-string">&quot;rotation&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-ivar">@rotation</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- rotation-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- rotation-method -->
 
     
       <div id="method-i-server" class="method-detail ">
@@ -1092,18 +1122,18 @@ instead of</p>
 
           
           <div class="method-source-code" id="server-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 459</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 472</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">server</span>
   <span class="ruby-ivar">@server</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">getInfo</span>(<span class="ruby-string">&quot;server&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-ivar">@server</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- server-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- server-method -->
 
     
       <div id="method-i-size_url" class="method-detail ">
@@ -1126,18 +1156,18 @@ valid sizes are in the VALID_SIZES hash</p>
 
           
           <div class="method-source-code" id="size_url-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 486</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 499</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">size_url</span>(<span class="ruby-identifier">size</span>=<span class="ruby-string">&#39;Medium&#39;</span>)
   <span class="ruby-identifier">uri_for_photo_from_self</span>(<span class="ruby-identifier">size</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">sizes</span>(<span class="ruby-identifier">size</span>)[<span class="ruby-string">&#39;url&#39;</span>]
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- size_url-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- size_url-method -->
 
     
       <div id="method-i-sizes" class="method-detail ">
@@ -1159,21 +1189,21 @@ valid sizes are in the VALID_SIZES hash</p>
 
           
           <div class="method-source-code" id="sizes-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 551</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 564</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">sizes</span>(<span class="ruby-identifier">size</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">size</span> = <span class="ruby-identifier">normalize_size</span>(<span class="ruby-identifier">size</span>)
   <span class="ruby-identifier">sizes</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">photos_getSizes</span>(<span class="ruby-string">&#39;photo_id&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@id</span>)[<span class="ruby-string">&#39;sizes&#39;</span>][<span class="ruby-string">&#39;size&#39;</span>]
   <span class="ruby-identifier">sizes</span> = <span class="ruby-identifier">sizes</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">asize</span><span class="ruby-operator">|</span> <span class="ruby-identifier">asize</span>[<span class="ruby-string">&#39;label&#39;</span>]<span class="ruby-operator">==</span><span class="ruby-identifier">size</span>} <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">sizes</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- sizes-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- sizes-method -->
 
     
       <div id="method-i-source" class="method-detail ">
@@ -1195,18 +1225,18 @@ valid sizes are in the VALID_SIZES hash</p>
 
           
           <div class="method-source-code" id="source-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 518</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 531</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">source</span>(<span class="ruby-identifier">size</span>=<span class="ruby-string">&#39;Medium&#39;</span>)
   <span class="ruby-identifier">image_source_uri_from_self</span>(<span class="ruby-identifier">size</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">sizes</span>(<span class="ruby-identifier">size</span>)[<span class="ruby-string">&#39;source&#39;</span>]
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- source-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- source-method -->
 
     
       <div id="method-i-tags" class="method-detail ">
@@ -1228,18 +1258,18 @@ valid sizes are in the VALID_SIZES hash</p>
 
           
           <div class="method-source-code" id="tags-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 559</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 572</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">tags</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">tags_getListPhoto</span>(<span class="ruby-string">&#39;photo_id&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@id</span>)[<span class="ruby-string">&#39;photo&#39;</span>][<span class="ruby-string">&#39;tags&#39;</span>]
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- tags-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- tags-method -->
 
     
       <div id="method-i-tags-3D" class="method-detail ">
@@ -1261,17 +1291,17 @@ valid sizes are in the VALID_SIZES hash</p>
 
           
           <div class="method-source-code" id="tags-3D-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 576</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 589</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">tags=</span>(<span class="ruby-identifier">tags</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- tags-3D-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- tags-3D-method -->
 
     
       <div id="method-i-title-3D" class="method-detail ">
@@ -1293,17 +1323,17 @@ valid sizes are in the VALID_SIZES hash</p>
 
           
           <div class="method-source-code" id="title-3D-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 580</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 593</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">title=</span>(<span class="ruby-identifier">title</span>)
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- title-3D-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- title-3D-method -->
 
     
       <div id="method-i-to_s" class="method-detail ">
@@ -1326,18 +1356,18 @@ title</p>
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 611</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 624</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
   <span class="ruby-identifier">title</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- to_s-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- to_s-method -->
 
     
       <div id="method-i-url" class="method-detail ">
@@ -1364,7 +1394,7 @@ href="Photo.html#method-i-size_url">#size_url</a> instead</p>
 
           
           <div class="method-source-code" id="url-source">
-            <pre><span class="ruby-comment"># File lib/flickr.rb, line 501</span>
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 514</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">url</span>(<span class="ruby-identifier">size</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">normalize_size</span>(<span class="ruby-identifier">size</span>) <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;Medium&#39;</span>
     <span class="ruby-identifier">size_url</span>(<span class="ruby-identifier">size</span>)
@@ -1372,25 +1402,26 @@ href="Photo.html#method-i-size_url">#size_url</a> instead</p>
     <span class="ruby-ivar">@url</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">uri_for_photo_from_self</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-          </div>
+          </div><!-- url-source -->
           
         </div>
 
         
 
         
-      </div>
+      </div><!-- url-method -->
 
     
-    </section>
+    </section><!-- public-instance-method-details -->
   
-  </section>
-</main>
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
-<footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
-  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
 </footer>
 

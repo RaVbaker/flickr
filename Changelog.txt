@@ -1,3 +1,8 @@
+1.2.0 2014-05-13
+* New image sizes support: Large square, Small 320, Medium 640 - #5 - https://github.com/RaVbaker/flickr/issues/5
+* SSL support for requests to Flickr API - #4 - https://github.com/RaVbaker/flickr/issues/4
+  This change might not be backward compatible so I changed gem version to 1.2. See README.md for more info about SSL
+
 1.1.2 2014-04-17
 * No changes at all. I failed to set a gem update date for 1.1.1
 
