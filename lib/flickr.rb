@@ -59,9 +59,12 @@ class Flickr
   # "http://farm4.static.flickr.com/3118/2397458775_2ec2ddc324_m.jpg".
   # The VALID_SIZES hash associates the correct letter with a label
   VALID_SIZES = { "Square" => ["s", "sq"],
+                  "Large Square" => ["q", "q"],
                   "Thumbnail" => ["t", "t"],
                   "Small" => ["m", "s"],
+                  "Small 320" => ["n", "n"],
                   "Medium" => [nil, "m"],
+                  "Medium 640" => ["z", "z"],
                   "Large" => ["b", "l"]
                 }
 
