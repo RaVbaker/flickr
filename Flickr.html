@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Flickr - Flickr</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/flickr.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-find_by_url">#find_by_url</a>
+    
+    <li ><a href="#method-i-get_token_from">#get_token_from</a>
+    
+    <li ><a href="#method-i-groups">#groups</a>
+    
+    <li ><a href="#method-i-http_get">#http_get</a>
+    
+    <li ><a href="#method-i-licenses">#licenses</a>
+    
+    <li ><a href="#method-i-login_url">#login_url</a>
+    
+    <li ><a href="#method-i-method_missing">#method_missing</a>
+    
+    <li ><a href="#method-i-photos">#photos</a>
+    
+    <li ><a href="#method-i-photos_request">#photos_request</a>
+    
+    <li ><a href="#method-i-photos_search">#photos_search</a>
+    
+    <li ><a href="#method-i-photoset">#photoset</a>
+    
+    <li ><a href="#method-i-recent">#recent</a>
+    
+    <li ><a href="#method-i-related_tags">#related_tags</a>
+    
+    <li ><a href="#method-i-request">#request</a>
+    
+    <li ><a href="#method-i-request_url">#request_url</a>
+    
+    <li ><a href="#method-i-search">#search</a>
+    
+    <li ><a href="#method-i-set_up_configuration">#set_up_configuration</a>
+    
+    <li ><a href="#method-i-signature_from">#signature_from</a>
+    
+    <li ><a href="#method-i-tag">#tag</a>
+    
+    <li ><a href="#method-i-users">#users</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Flickr.html">Flickr</a>
+  
+    <li><a href="./Flickr/Config.html">Flickr::Config</a>
+  
+    <li><a href="./Flickr/Group.html">Flickr::Group</a>
+  
+    <li><a href="./Flickr/Photo.html">Flickr::Photo</a>
+  
+    <li><a href="./Flickr/PhotoCollection.html">Flickr::PhotoCollection</a>
+  
+    <li><a href="./Flickr/Photoset.html">Flickr::Photoset</a>
+  
+    <li><a href="./Flickr/User.html">Flickr::User</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Flickr</h1>
+
+  <div id="description" class="description">
+    
+<p><a href="Flickr.html">Flickr</a> client class. Requires an API key</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="API_PATH">API_PATH
+        
+        <dd class="description">
+        
+      
+        <dt id="HOST_URL">HOST_URL
+        
+        <dd class="description">
+        
+      
+        <dt id="VALID_SIZES">VALID_SIZES
+        
+        <dd class="description"><p><a href="Flickr.html">Flickr</a>, annoyingly, uses a number of
+representations to specify the size of a photo, depending on the context.
+It gives a label such a “Small” or “Medium” to a size of photo, when
+returning all possible sizes. However, when generating the uri for the page
+that features that size of photo, or the source url for the image itself it
+uses a single letter. Bizarrely, these letters are different depending on
+whether you want the <a href="Flickr.html">Flickr</a> page for the photo or
+the source uri – e.g. a “Small” photo (240 pixels on its longest side) may
+be viewed at “<a
+href="http://www.flickr.com/photos/sco/2397458775/sizes/s">www.flickr.com/photos/sco/2397458775/sizes/s</a>/”
+but its source is at “<img
+src="http://farm4.static.flickr.com/3118/2397458775_2ec2ddc324_m.jpg" />”.
+The <a href="Flickr.html#VALID_SIZES">VALID_SIZES</a> hash associates the
+correct letter with a label</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-api_key" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">api_key</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-auth_token" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">auth_token</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-user" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">user</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(api_key_or_params={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>To use the <a href="Flickr.html">Flickr</a> API you need an api key (see <a
+href="http://www.flickr.com/services/api/misc.api_keys.html">www.flickr.com/services/api/misc.api_keys.html</a>),
+and the flickr client object shuld be initialized with this. You&#39;ll
+also need a shared secret code if you want to use authentication (e.g. to
+get a user&#39;s private photos) There are two ways to initialize the <a
+href="Flickr.html">Flickr</a> client. The preferred way is with a hash of
+params, e.g. &#39;api_key&#39; =&gt; &#39;your_api_key&#39;,
+&#39;shared_secret&#39; =&gt; &#39;shared_secret_code&#39;,
+&#39;verify_ssl&#39; =&gt; true, &#39;ca_file&#39; =&gt;
+&#39;/path/to/cert.pem&#39;. Other way is to use in Rails an config file
+RAILS_ROOT/config/flickr.api.yml and there use params as key/values even
+specified for every environment.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">api_key_or_params</span>={})
+  <span class="ruby-ivar">@host</span> = <span class="ruby-constant">HOST_URL</span>
+  <span class="ruby-ivar">@api</span> = <span class="ruby-constant">API_PATH</span>
+  <span class="ruby-ivar">@verify_ssl</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">api_key_or_params</span>={} <span class="ruby-keyword">if</span> <span class="ruby-identifier">api_key_or_params</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-comment"># fix for nil value as argument</span>
+  <span class="ruby-identifier">api_key_or_params</span> = {<span class="ruby-value">:api_key</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">api_key_or_params</span>} <span class="ruby-keyword">if</span> <span class="ruby-identifier">api_key_or_params</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+  <span class="ruby-identifier">api_key_or_params</span> = <span class="ruby-constant">Config</span>.<span class="ruby-identifier">get</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Config</span>.<span class="ruby-identifier">parsed?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">api_key_or_params</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">set_up_configuration</span> <span class="ruby-identifier">api_key_or_params</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">api_key_or_params</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Hash</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-find_by_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_by_url</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implements flickr.urls.lookupGroup and flickr.urls.lookupUser</p>
+          
+          
+
+          
+          <div class="method-source-code" id="find_by_url-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_by_url</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">urls_lookupUser</span>(<span class="ruby-string">&#39;url&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">url</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-identifier">urls_lookupGroup</span>(<span class="ruby-string">&#39;url&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">url</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+  (<span class="ruby-identifier">response</span>[<span class="ruby-string">&#39;user&#39;</span>]) <span class="ruby-operator">?</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>[<span class="ruby-string">&#39;user&#39;</span>][<span class="ruby-string">&#39;id&#39;</span>], <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@api_key</span>) <span class="ruby-operator">:</span> <span class="ruby-constant">Group</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>[<span class="ruby-string">&#39;group&#39;</span>][<span class="ruby-string">&#39;id&#39;</span>], <span class="ruby-ivar">@api_key</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find_by_url-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find_by_url-method -->
+
+    
+      <div id="method-i-get_token_from" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_token_from</span><span
+            class="method-args">(frob)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Gets authentication token given a <a href="Flickr.html">Flickr</a> frob,
+which is returned when user allows access to their account for the
+application with the <a href="Flickr.html#attribute-i-api_key">#api_key</a>
+which made the request</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_token_from-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_token_from</span>(<span class="ruby-identifier">frob</span>)
+  <span class="ruby-identifier">auth_response</span> = <span class="ruby-identifier">request</span>(<span class="ruby-string">&quot;auth.getToken&quot;</span>, <span class="ruby-value">:frob</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">frob</span>)[<span class="ruby-string">&#39;auth&#39;</span>]
+  <span class="ruby-ivar">@auth_token</span> = <span class="ruby-identifier">auth_response</span>[<span class="ruby-string">&#39;token&#39;</span>]
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&#39;id&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">auth_response</span>[<span class="ruby-string">&#39;user&#39;</span>][<span class="ruby-string">&#39;nsid&#39;</span>],
+                    <span class="ruby-string">&#39;username&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">auth_response</span>[<span class="ruby-string">&#39;user&#39;</span>][<span class="ruby-string">&#39;username&#39;</span>],
+                    <span class="ruby-string">&#39;name&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">auth_response</span>[<span class="ruby-string">&#39;user&#39;</span>][<span class="ruby-string">&#39;fullname&#39;</span>],
+                    <span class="ruby-string">&#39;client&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@auth_token</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_token_from-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_token_from-method -->
+
+    
+      <div id="method-i-groups" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">groups</span><span
+            class="method-args">(group_name, options={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implements flickr.groups.search</p>
+          
+          
+
+          
+          <div class="method-source-code" id="groups-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">groups</span>(<span class="ruby-identifier">group_name</span>, <span class="ruby-identifier">options</span>={})
+  <span class="ruby-identifier">collection</span> = <span class="ruby-identifier">groups_search</span>({<span class="ruby-string">&quot;text&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">group_name</span>}.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>))[<span class="ruby-string">&#39;groups&#39;</span>][<span class="ruby-string">&#39;group&#39;</span>]
+  <span class="ruby-identifier">collection</span> = [<span class="ruby-identifier">collection</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Hash</span>
+
+  <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">group</span><span class="ruby-operator">|</span> <span class="ruby-constant">Group</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;id&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">group</span>[<span class="ruby-string">&#39;nsid&#39;</span>],
+                                          <span class="ruby-string">&quot;name&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">group</span>[<span class="ruby-string">&#39;name&#39;</span>],
+                                          <span class="ruby-string">&quot;eighteenplus&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">group</span>[<span class="ruby-string">&#39;eighteenplus&#39;</span>],
+                                          <span class="ruby-string">&quot;client&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>) }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- groups-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- groups-method -->
+
+    
+      <div id="method-i-http_get" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">http_get</span><span
+            class="method-args">(url)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Does an HTTP GET on a given URL and returns the response body</p>
+          
+          
+
+          
+          <div class="method-source-code" id="http_get-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">http_get</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">url</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">url</span>.<span class="ruby-identifier">port</span>
+  <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">http</span>.<span class="ruby-identifier">verify_mode</span> = (<span class="ruby-ivar">@verify_ssl</span> <span class="ruby-operator">?</span> <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_PEER</span> <span class="ruby-operator">:</span> <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>)
+  <span class="ruby-identifier">http</span>.<span class="ruby-identifier">ca_file</span> = <span class="ruby-ivar">@ca_file</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ca_file</span>
+  <span class="ruby-identifier">http</span>.<span class="ruby-identifier">start</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">res</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">res</span>.<span class="ruby-identifier">request_get</span>(<span class="ruby-identifier">url</span>).<span class="ruby-identifier">body</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- http_get-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- http_get-method -->
+
+    
+      <div id="method-i-licenses" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">licenses</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implements flickr.photos.licenses.getInfo</p>
+          
+          
+
+          
+          <div class="method-source-code" id="licenses-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">licenses</span>
+  <span class="ruby-identifier">photos_licenses_getInfo</span>[<span class="ruby-string">&#39;licenses&#39;</span>][<span class="ruby-string">&#39;license&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- licenses-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- licenses-method -->
+
+    
+      <div id="method-i-login_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">login_url</span><span
+            class="method-args">(perms)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns url for user to login in to <a href="Flickr.html">Flickr</a> to
+authenticate app for a user</p>
+          
+          
+
+          
+          <div class="method-source-code" id="login_url-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login_url</span>(<span class="ruby-identifier">perms</span>)
+  <span class="ruby-node">&quot;https://flickr.com/services/auth/?api_key=#{@api_key}&amp;perms=#{perms}&amp;api_sig=#{signature_from(&#39;api_key&#39;=&gt;@api_key, &#39;perms&#39; =&gt; perms)}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- login_url-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- login_url-method -->
+
+    
+      <div id="method-i-method_missing" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">method_missing</span><span
+            class="method-args">(method_id, params={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implements everything else. Any method not defined explicitly will be
+passed on to the <a href="Flickr.html">Flickr</a> API, and return an
+XmlSimple document. For example, Flickr#test_echo is not defined, so it
+will pass the call to the flickr.test.echo method.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="method_missing-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">method_id</span>, <span class="ruby-identifier">params</span>={})
+  <span class="ruby-identifier">request</span>(<span class="ruby-identifier">method_id</span>.<span class="ruby-identifier">id2name</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/_/</span>, <span class="ruby-string">&#39;.&#39;</span>), <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- method_missing-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- method_missing-method -->
+
+    
+      <div id="method-i-photos" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">photos</span><span
+            class="method-args">(*criteria)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implements flickr.photos.getRecent and flickr.photos.search</p>
+          
+          
+
+          
+          <div class="method-source-code" id="photos-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">photos</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">criteria</span>)
+  <span class="ruby-keyword">not</span> <span class="ruby-identifier">criteria</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">photos_search</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">criteria</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">recent</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- photos-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- photos-method -->
+
+    
+      <div id="method-i-photos_request" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">photos_request</span><span
+            class="method-args">(method, params={}, list_node="photos")</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>acts like request but returns a <a
+href="Flickr/PhotoCollection.html">PhotoCollection</a> (a list of <a
+href="Flickr/Photo.html">Photo</a> objects)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="photos_request-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">photos_request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">list_node</span>=<span class="ruby-string">&quot;photos&quot;</span>)
+  <span class="ruby-identifier">photos</span> = <span class="ruby-identifier">request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>)
+  <span class="ruby-constant">PhotoCollection</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">photos</span>, <span class="ruby-ivar">@api_key</span>, <span class="ruby-identifier">list_node</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- photos_request-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- photos_request-method -->
+
+    
+      <div id="method-i-photos_search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">photos_search</span><span
+            class="method-args">(params={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="photos_search-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">photos_search</span>(<span class="ruby-identifier">params</span>={})
+  <span class="ruby-identifier">photos_request</span>(<span class="ruby-string">&#39;photos.search&#39;</span>, <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- photos_search-source -->
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Flickr.html#method-i-search">search</a>
+        </div>
+        
+
+        
+      </div><!-- photos_search-method -->
+
+    
+      <div id="method-i-photoset" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">photoset</span><span
+            class="method-args">(photoset_id)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="photoset-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">photoset</span>(<span class="ruby-identifier">photoset_id</span>)
+  <span class="ruby-constant">Photoset</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">photoset_id</span>, <span class="ruby-ivar">@api_key</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- photoset-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- photoset-method -->
+
+    
+      <div id="method-i-recent" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">recent</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>flickr.photos.getRecent 100 newest photos from everyone</p>
+          
+          
+
+          
+          <div class="method-source-code" id="recent-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">recent</span>
+  <span class="ruby-identifier">photos_request</span>(<span class="ruby-string">&#39;photos.getRecent&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- recent-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- recent-method -->
+
+    
+      <div id="method-i-related_tags" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">related_tags</span><span
+            class="method-args">(tag)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implements flickr.tags.getRelated</p>
+          
+          
+
+          
+          <div class="method-source-code" id="related_tags-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">related_tags</span>(<span class="ruby-identifier">tag</span>)
+  <span class="ruby-identifier">tags_getRelated</span>(<span class="ruby-string">&#39;tag&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">tag</span>)[<span class="ruby-string">&#39;tags&#39;</span>][<span class="ruby-string">&#39;tag&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- related_tags-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- related_tags-method -->
+
+    
+      <div id="method-i-request" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">request</span><span
+            class="method-args">(method, params={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Takes a <a href="Flickr.html">Flickr</a> API method name and set of
+parameters; returns an XmlSimple object with the response</p>
+          
+          
+
+          
+          <div class="method-source-code" id="request-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>={})
+  <span class="ruby-identifier">url</span> = <span class="ruby-identifier">request_url</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>)
+  <span class="ruby-identifier">response</span> = <span class="ruby-constant">XmlSimple</span>.<span class="ruby-identifier">xml_in</span>(<span class="ruby-identifier">http_get</span>(<span class="ruby-identifier">url</span>), { <span class="ruby-string">&#39;ForceArray&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span> })
+  <span class="ruby-identifier">raise</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&#39;err&#39;</span>][<span class="ruby-string">&#39;msg&#39;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&#39;stat&#39;</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;ok&#39;</span>
+  <span class="ruby-identifier">response</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- request-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- request-method -->
+
+    
+      <div id="method-i-request_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">request_url</span><span
+            class="method-args">(method, params={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Builds url for <a href="Flickr.html">Flickr</a> API REST request from given
+the flickr method name (exclusing the &#39;flickr.&#39; that begins each
+method call) and params (where applicable) which should be supplied as a
+Hash (e.g &#39;user_id&#39; =&gt; “foo123”)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="request_url-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">request_url</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>={})
+  <span class="ruby-identifier">method</span> = <span class="ruby-string">&#39;flickr.&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">method</span>
+  <span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;#{@host}#{@api}/?api_key=#{@api_key}&amp;method=#{method}&quot;</span>
+  <span class="ruby-identifier">params</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-string">&#39;api_key&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@api_key</span>, <span class="ruby-string">&#39;method&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">method</span>, <span class="ruby-string">&#39;auth_token&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@auth_token</span>)
+  <span class="ruby-identifier">signature</span> = <span class="ruby-identifier">signature_from</span>(<span class="ruby-identifier">params</span>)
+
+  <span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;#{@host}#{@api}/?&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-string">&#39;api_sig&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">signature</span>).<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{k}=&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">CGI</span><span class="ruby-operator">::</span><span class="ruby-identifier">escape</span>(<span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_s</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span> }.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;&amp;&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- request_url-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- request_url-method -->
+
+    
+      <div id="method-i-search" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">search</span><span
+            class="method-args">(params={})</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Flickr.html#method-i-photos_search">photos_search</a>
+        </div>
+        
+      </div><!-- search-method -->
+
+    
+      <div id="method-i-set_up_configuration" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_up_configuration</span><span
+            class="method-args">(api_key_or_params = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="set_up_configuration-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_up_configuration</span> <span class="ruby-identifier">api_key_or_params</span> = {}
+  <span class="ruby-ivar">@api_key</span> = <span class="ruby-identifier">api_key_or_params</span>[<span class="ruby-value">:api_key</span>]
+  <span class="ruby-ivar">@shared_secret</span> = <span class="ruby-identifier">api_key_or_params</span>[<span class="ruby-value">:shared_secret</span>]
+  <span class="ruby-ivar">@auth_token</span> = <span class="ruby-identifier">api_key_or_params</span>[<span class="ruby-value">:auth_token</span>]
+  <span class="ruby-ivar">@ca_file</span> = <span class="ruby-identifier">api_key_or_params</span>[<span class="ruby-value">:ca_file</span>]
+  <span class="ruby-ivar">@verify_ssl</span> = <span class="ruby-operator">!</span>(<span class="ruby-identifier">api_key_or_params</span>[<span class="ruby-value">:verify_ssl</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">===</span> <span class="ruby-string">&#39;false&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_up_configuration-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_up_configuration-method -->
+
+    
+      <div id="method-i-signature_from" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">signature_from</span><span
+            class="method-args">(params={})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="signature_from-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">signature_from</span>(<span class="ruby-identifier">params</span>={})
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@shared_secret</span> <span class="ruby-comment"># don&#39;t both getting signature if no shared_secret</span>
+  <span class="ruby-identifier">request_str</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span>}.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{p[0].to_s}#{p[1]}&quot;</span>}.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">join</span> <span class="ruby-comment"># build key value pairs, sort in alpha order then join them, ignoring those with nil value</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-node">&quot;#{@shared_secret}#{request_str}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- signature_from-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- signature_from-method -->
+
+    
+      <div id="method-i-tag" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tag</span><span
+            class="method-args">(tag)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Gets public photos with a given tag</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tag-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tag</span>(<span class="ruby-identifier">tag</span>)
+  <span class="ruby-identifier">photos</span>(<span class="ruby-string">&#39;tags&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">tag</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- tag-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- tag-method -->
+
+    
+      <div id="method-i-users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">users</span><span
+            class="method-args">(lookup=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Implements flickr.people.findByEmail and flickr.people.findByUsername.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="users-source">
+            <pre><span class="ruby-comment"># File lib/flickr.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">users</span>(<span class="ruby-identifier">lookup</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">user</span> = <span class="ruby-identifier">people_findByEmail</span>(<span class="ruby-string">&#39;find_email&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">lookup</span>)[<span class="ruby-string">&#39;user&#39;</span>] <span class="ruby-keyword">rescue</span> <span class="ruby-identifier">people_findByUsername</span>(<span class="ruby-string">&#39;username&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">lookup</span>)[<span class="ruby-string">&#39;user&#39;</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;id&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">user</span>[<span class="ruby-string">&quot;nsid&quot;</span>], <span class="ruby-string">&quot;username&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">user</span>[<span class="ruby-string">&quot;username&quot;</span>], <span class="ruby-string">&quot;client&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- users-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- users-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
