@@ -188,7 +188,7 @@ class Flickr
     http.verify_mode = (@verify_ssl ? OpenSSL::SSL::VERIFY_PEER : OpenSSL::SSL::VERIFY_NONE)
     http.ca_file = @ca_file if @ca_file
     http.start do |res|
-      res.request_get(url).body.to_s
+      res.request_get(url.request_uri).body.to_s
     end
   end
 
