@@ -1,3 +1,6 @@
+== 1.2.1 2014-06-29
+* fixed compatibility issue with ruby 1.9.3 - #6 - thanks to @electronick https://github.com/RaVbaker/flickr/issues/6
+
 == 1.2.0 2014-05-13
 * New image sizes support: Large square, Small 320, Medium 640 - #5 - https://github.com/RaVbaker/flickr/issues/5
 * SSL support for requests to Flickr API - #4 - https://github.com/RaVbaker/flickr/issues/4
